@@ -13,20 +13,4 @@
 	<packaging>jar</packaging>
 	<name>interfaces</name>
 	<description>interfaces</description>
-	
-	<dependencies>
-		<!-- spring cloud -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		
-		<!-- teacher -->
-		<dependency>
-			<groupId>com.tss.teacher</groupId>
-			<artifactId>services</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
-
 </project>

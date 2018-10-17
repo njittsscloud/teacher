@@ -1,7 +1,7 @@
 package com.tss.teacher.web.account.teacher;
 
-import com.tss.teacher.interfaces.account.teacher.TeacherInterface;
 import com.tss.teacher.interfaces.account.teacher.vo.UserBaseInfo;
+import com.tss.teacher.services.account.teacher.TeacherService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -18,12 +18,12 @@ public class TeacherController {
     private static final Logger LOG = LoggerFactory.getLogger(TeacherController.class);
 
     @Autowired
-    private TeacherInterface teacherInterface;
+    private TeacherService teacherService;
 
     @ApiOperation(value = "获取用户基本信息", notes = "获取用户基本信息")
     @RequestMapping(value = "/getUserBaseInfoById/{id}", method = RequestMethod.GET)
     public UserBaseInfo getUserBaseInfo(@PathVariable Long id) {
-        return teacherInterface.getUserBaseInfoById(id);
+        return teacherService.getUserBaseInfoById(id);
     }
 
 
