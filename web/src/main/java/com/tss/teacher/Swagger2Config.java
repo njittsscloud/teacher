@@ -39,7 +39,7 @@ public class Swagger2Config {
                 // 页面标题
                 .title("教师接口文档")
                 // 创建人
-                .contact(new Contact("MQG", "", "mo1056610188@163.com"))
+                .contact(new Contact("NJITTSSCLOUD", "", "njittsscloud@gmail.com"))
                 // 版本号
                 .version("1.0")
                 // 描述

@@ -13,4 +13,12 @@
 	<packaging>jar</packaging>
 	<name>interfaces</name>
 	<description>interfaces</description>
+
+	<dependencies>
+		<!-- student -->
+		<dependency>
+			<groupId>com.tss.teacher</groupId>
+			<artifactId>common</artifactId>
+		</dependency>
+	</dependencies>
 </project>

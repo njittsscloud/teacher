@@ -1,27 +1,27 @@
 server:
-  port: 8082
-  context-path: /teacher
+  port: 8071
+#  context-path: /teacher
 
 spring:
   application:
-    name: teacher
+    name: tss-teacher
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://dev.tss.com:8080/eureka/
-  instance:
-    metadata-map: 
-      management:
-        context-path: ${server.context-path}/actuator
-    health-check-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/health
-    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
+      defaultZone: http://dev.tss.com:8090/eureka/
+#  instance:
+#    metadata-map:
+#      management:
+#        context-path: ${server.context-path}/actuator
+#    health-check-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/health
+#    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
 #    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/info
-    home-page-url: http://dev.tss.com:${server.port}/
+#    home-page-url: http://dev.tss.com:${server.port}/
     
-feign:
-  hystrix:
-      enabled: false
+#feign:
+#  hystrix:
+#      enabled: false
 
 logging:
   level:
@@ -31,3 +31,5 @@ logging:
 account:
   contextPath: /account 
   serviceId: account
+report:
+  serviceId: TSS-REPORT

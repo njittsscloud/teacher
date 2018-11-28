@@ -13,11 +13,12 @@
 	<groupId>com.tss.teacher</groupId>
 	<artifactId>teacher</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>teacher</name>
 	<description>teacher</description>
 
 	<modules>
+		<module>common</module>
 		<module>interfaces</module>
 		<module>services</module>
 		<module>web</module>
@@ -40,6 +41,13 @@
 				<scope>import</scope>
 			</dependency>
 
+            <!-- teacher -->
+            <dependency>
+                <groupId>com.tss.teacher</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
 			<dependency>
 				<groupId>com.tss.teacher</groupId>
 				<artifactId>interfaces</artifactId>
@@ -55,6 +63,19 @@
 			<dependency>
 				<groupId>com.tss.teacher</groupId>
 				<artifactId>web</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<!-- basic -->
+			<dependency>
+				<groupId>com.tss</groupId>
+				<artifactId>basic-common</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.tss</groupId>
+				<artifactId>basic-site</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>
