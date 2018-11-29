@@ -2,8 +2,7 @@ package com.tss.teacher.services.task;
 
 import com.github.pagehelper.PageInfo;
 import com.tss.teacher.interfaces.task.TaskInterface;
-import com.tss.teacher.interfaces.task.vo.TeacherTaskReqVO;
-import com.tss.teacher.interfaces.task.vo.TeacherTaskRespVO;
+import com.tss.teacher.interfaces.task.vo.*;
 import com.tss.teacher.services.task.feign.ReportFeignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,5 +23,25 @@ public class TaskService implements TaskInterface {
     @Override
     public PageInfo<TeacherTaskRespVO> getTeacherTaskList(TeacherTaskReqVO param) {
         return reportFeignService.getTeacherTaskList(param);
+    }
+
+    @Override
+    public TaskDetailRespVO getTaskDetail(TaskDetailReqVO param) {
+        return reportFeignService.getTaskDetail(param);
+    }
+
+    @Override
+    public Long createTask(TaskCreateReqVO param) {
+        return reportFeignService.createTask(param);
+    }
+
+    @Override
+    public Boolean updateTask(TaskUpdateReqVO param) {
+        return reportFeignService.updateTask(param);
+    }
+
+    @Override
+    public Boolean publishTask(Long taskId) {
+        return reportFeignService.publishTask(taskId);
     }
 }
