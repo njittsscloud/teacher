@@ -1,4 +1,4 @@
-package com.tss.teacher.interfaces.account.teacher.vo;
+package com.tss.teacher.interfaces.account.vo;
 
 public class UserBaseInfo {
 

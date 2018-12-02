@@ -35,7 +35,6 @@ eureka:
 #      enabled: false
 
 account:
-  contextPath: /account 
-  serviceId: account
+  serviceId: TSS-ACCOUNT
 report:
   serviceId: TSS-REPORT
