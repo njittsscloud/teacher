@@ -3,7 +3,7 @@ package com.tss.teacher.services.task;
 import com.github.pagehelper.PageInfo;
 import com.tss.teacher.interfaces.task.TaskInterface;
 import com.tss.teacher.interfaces.task.vo.*;
-import com.tss.teacher.services.task.feign.ReportFeignService;
+import com.tss.teacher.services.task.feign.TaskFeignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class TaskService implements TaskInterface {
     private static final Logger LOG = LoggerFactory.getLogger(TaskService.class);
 
     @Autowired
-    private ReportFeignService reportFeignService;
+    private TaskFeignService reportFeignService;
     
     @Override
     public PageInfo<TeacherTaskRespVO> getTeacherTaskList(TeacherTaskReqVO param) {
