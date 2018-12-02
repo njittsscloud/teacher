@@ -2,6 +2,17 @@ server:
   port: 8071
 #  context-path: /teacher
 
+logging:
+  level:
+    root: INFO
+    com.tss: DEBUG
+
+user:
+  student:
+    infoUrl: http://dev.tss.com:8080/student/getLoginInfo
+  teacher:
+    infoUrl: http://dev.tss.com:8080/teacher/getLoginInfo
+
 spring:
   application:
     name: tss-teacher
@@ -22,11 +33,6 @@ eureka:
 #feign:
 #  hystrix:
 #      enabled: false
-
-logging:
-  level:
-    root: INFO
-    com.tss: DEBUG
 
 account:
   contextPath: /account 

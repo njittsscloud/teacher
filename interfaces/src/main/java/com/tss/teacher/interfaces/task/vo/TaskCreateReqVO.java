@@ -65,13 +65,35 @@ public class TaskCreateReqVO {
     @NotEmpty(message = "实验班级不能为空")
     private List<ClassBaseInfoVO> classList;
 
-    @ApiModelProperty(value = "教师id", example = "1")
-    @NotNull
+    @ApiModelProperty(value = "教师id", example = "1", hidden = true)
     private Long teacherId;
 
-    @ApiModelProperty(value = "教师姓名", example = "张三")
-    @NotBlank(message = "教师姓名不能为空")
+    @ApiModelProperty(value = "教师姓名", example = "张三", hidden = true)
     private String teacherName;
+
+    public static class ClassBaseInfoVO {
+        @ApiModelProperty(value = "班级id", example = "1")
+        private Long classId;
+
+        @ApiModelProperty(value = "班级名称", example = "软嵌142")
+        private String className;
+
+        public Long getClassId() {
+            return classId;
+        }
+
+        public void setClassId(Long classId) {
+            this.classId = classId;
+        }
+
+        public String getClassName() {
+            return className;
+        }
+
+        public void setClassName(String className) {
+            this.className = className;
+        }
+    }
 
     public String getYear() {
         return year;

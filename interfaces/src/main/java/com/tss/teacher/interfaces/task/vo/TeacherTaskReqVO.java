@@ -20,14 +20,14 @@ public class TeacherTaskReqVO {
     @ApiModelProperty(value = "课程分配id", example = "1")
     private Long courseId;
 
-    @ApiModelProperty(value = "教师id", example = "1")
-    private Long teacherId;
-
     @ApiModelProperty(value = "状态 0全部 1待发布 2已发布", example = "0")
     private Integer status;
 
     @ApiModelProperty("分页参数信息")
     private PageParam pageParam;
+
+    @ApiModelProperty(value = "教师id", example = "1", hidden = true)
+    private Long teacherId;
 
     public PageParam getPageParam() {
         return pageParam;
