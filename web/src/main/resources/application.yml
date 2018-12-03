@@ -9,9 +9,9 @@ logging:
 
 user:
   student:
-    infoUrl: http://dev.tss.com:8080/student/getLoginInfo
+    infoUrl: http://localhost:8080/student/getLoginInfo
   teacher:
-    infoUrl: http://dev.tss.com:8080/teacher/getLoginInfo
+    infoUrl: http://localhost:8080/teacher/getLoginInfo
 
 spring:
   application:
@@ -20,7 +20,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://dev.tss.com:8090/eureka/
+      defaultZone: http://localhost:8090/eureka/
 #  instance:
 #    metadata-map:
 #      management:

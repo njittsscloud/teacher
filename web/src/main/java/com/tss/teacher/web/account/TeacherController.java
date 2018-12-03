@@ -2,7 +2,7 @@ package com.tss.teacher.web.account;
 
 import com.tss.basic.site.argumentresolver.JsonParam;
 import com.tss.teacher.interfaces.account.TeacherInterface;
-import com.tss.teacher.interfaces.account.vo.LoginUserInfoVO;
+import com.tss.teacher.interfaces.account.vo.LoginUserInfoRespVO;
 import com.tss.teacher.interfaces.account.vo.UserIdentityVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletResponse;
 
 @Api(value = "教师模块", tags = "TeacherController", description = "教师模块")
 @RestController
@@ -24,8 +26,8 @@ public class TeacherController {
 
     @ApiOperation(value = "教师登录", notes = "教师登录")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public LoginUserInfoVO login(@JsonParam(validation = true) UserIdentityVO userIdentity) {
-        return teacherInterface.doLogin(userIdentity);
+    public LoginUserInfoRespVO login(HttpServletResponse response, @JsonParam(validation = true) UserIdentityVO userIdentity) {
+        return teacherInterface.doLogin(response, userIdentity);
     }
 
 //    @ApiOperation(value = "获取用户基本信息", notes = "获取用户基本信息")
