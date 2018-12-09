@@ -8,10 +8,10 @@ logging:
     com.tss: DEBUG
 
 user:
-  student:
-    infoUrl: http://localhost:8080/student/getLoginInfo
+  auth:
+    infoUrl: http://localhost:8095/oauth2/user-me
   teacher:
-    infoUrl: http://localhost:8080/teacher/getLoginInfo
+    infoUrl: http://localhost:8080/teacher/info/getLoginInfo
 
 spring:
   application:
